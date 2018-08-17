@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de usuario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="login.js"></script>
+        <script src="persona.js"></script>
+    </head>
+    <body>
+        <div>Registro de usuario</div>
+         <div ng-app="itemsFusepong" ng-controller="myCtrl">
+        <input type="text" placeholder="Nombre" id="nombre"></input>
+        <br/>
+        <input type="text" placeholder="Correo" id="correo"></input>
+        <br/>
+        <input type="text" placeholder="Usuario" id="usuario"></input>
+        <br/>
+        <input type="password" placeholder="Contraseña" id="psw"></input>
+        <br/>
+        <input type="button" value="Registrar usuario" id="button" ng-click="addUser()"></input>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Agregar item</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="item.js"></script>
+    </head>
+    <body>
+        <div>Agregar item</div>
+        <div ng-app="itemsFusepong" ng-controller="myCtrl">
+        <input type="text" placeholder="Nombre" id="nombre"></input>
+        <br/>
+        <input type="text" placeholder="Descripción" id="descripcion"></input>
+        <br/>
+        <input type="number" placeholder="Valor" id="valor"></input>
+        <br/>
+        <input type="number" step="0.1" placeholder="Iva" id="iva"></input>
+        <br/>
+        <input type="text" placeholder="Envio" id="envio"></input>
+        <br/>
+        <input type="number" placeholder="Cantidad" id="cantidad"></input>
+        <br/>
+        <input type="text" placeholder="Imagen URL" id="imagenItem"></input>
+        <br/>
+        <input type="button" value="Agregar item" id="button" ng-click="addItem()"></input>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tienda Fusepong Items</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="item.js"></script>
+    </head>
+    <body>
+        <div>Items</div>
+        <button onclick="viewAddItem()">Agregar Item</button>
+        <button onclick="viewSoldItem()">Items comprados</button>
+       <div ng-app="itemsFusepong" ng-controller="myCtrl">
+         <table  border="1">
+             <tr>
+                 <td>Nombre</td>
+                 <td>Descripcion</td>
+                 <td>Valor</td>
+                 <td>Iva</td>
+                 <td>Envio</td>
+                 <td>Cantidad</td>
+                 <td>Imagen</td>
+             </tr>
+            <tr ng-repeat="item in items">
+                <td>{{item.nombre}}</td>
+                <td>{{item.descripcion}}</td>
+                <td>{{item.valor}}$</td>
+                <td>{{item.iva}}</td>
+                <td>{{item.envio}}</td>
+                <td>{{item.cantidad}}</td>
+                <td><img src="{{item.foto}}" style="width: 120px;height: 120px"></td>
+                <td><button ng-click="deleteItem(item.id)">Borrar</button></td>
+                <td><button ng-click="updateItemView(item)">Actualizar</button></td>
+            </tr>
+         </table></br>
+         <div id="popup" ng-show="istrue">
+            <p>Nombre:<input type="text" id="nombre" ng-model="editedItem.nombre"></p>
+            <p>Descripcion:<input type="text" id="descripcion" ng-model="editedItem.descripcion"></p>
+            <p>Valor:<input type="number" id="valor" ng-model="editedItem.valor"></p>
+            <p>Iva:<input type="text" id="iva" ng-model="editedItem.iva"></p>
+            <p>Cantidad:<input type="text" id="cantidad" ng-model="editedItem.cantidad"></p>
+            <p><input type="text" id="imagenItem" ng-model="editedItem.foto"></input></p>
+            <br/>
+            <button ng-click="updateItem()">Actualizar</button>
+            <button ng-click="closepopup()">Cerrar</button>
+         </div>
+        </div>    
+    </body>
+</html>

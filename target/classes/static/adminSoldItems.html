@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Items comprados</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="item.js"></script>
+    </head>
+    <body>
+        <div>Items comprados </div>
+         <div ng-app="itemsFusepong" ng-controller="myCtrl">
+         <table  border="1">
+            <tr>
+                <td>Nombre</td>
+                <td>Descripcion</td>
+                <td>Valor</td>
+                <td>Iva</td>
+                <td>Envio</td>
+            </tr>
+            <tr ng-repeat="item in soldItems">
+                <td>{{item.nombre}}</td>
+                <td>{{item.descripcion}}</td>
+                <td>{{item.valor}}$</td>
+                <td>{{item.iva}}</td>
+                <td>{{item.envio}}</td>
+            </tr>
+         </table>
+        </div>   
+    </body>
+</html>
